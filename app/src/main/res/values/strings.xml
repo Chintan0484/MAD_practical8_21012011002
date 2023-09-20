@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MAD_practical8_21012011002</string>
+    <string name="by_pressing_buttons_alarm_can_be_created_and_cancelled">By Pressing Buttons,Alarm can be created and cancelled</string>
+    <string name="check_current_time_by_looking_below_real_digital_clock">Check Current time by looking below real digital clock</string>
 </resources>
