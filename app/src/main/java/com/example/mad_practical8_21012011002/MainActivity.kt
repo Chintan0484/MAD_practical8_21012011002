@@ -1,5 +1,6 @@
 package com.example.mad_practical8_21012011002
 
+import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -14,8 +15,12 @@ class MainActivity : AppCompatActivity() {
         card.visibility=View.GONE
         val alarmbutton=findViewById<Button>(R.id.clock)
         alarmbutton.setOnClickListener {
-            card.visibility=View.VISIBLE
+            //card.visibility=View.VISIBLE
+            TimePickerDialog(this,{tp,hour,minute->setalarmtime(hour,minute)},11,0,false)
         }
 
+    }
+    fun setalarmtime(hour:Int,Minute:Int){
+        //card.visibility=View.GONE
     }
 }
