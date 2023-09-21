@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val alarmbutton=findViewById<Button>(R.id.clock)
         alarmbutton.setOnClickListener {
             //card.visibility=View.VISIBLE
-            TimePickerDialog(this,{tp,hour,minute->setalarmtime(hour,minute)},11,0,false)
+            TimePickerDialog(this,{tp,hour,minute->setalarmtime(hour,minute)},11,0,false).show()
         }
 
     }
