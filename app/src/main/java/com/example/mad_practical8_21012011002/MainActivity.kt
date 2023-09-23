@@ -1,6 +1,8 @@
 package com.example.mad_practical8_21012011002
 
+import android.app.PendingIntent
 import android.app.TimePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,5 +24,9 @@ class MainActivity : AppCompatActivity() {
     }
     fun setalarmtime(hour:Int,Minute:Int){
         //card.visibility=View.GONE
+    }
+    fun setalarm(millitime:Long,action: String){
+        val intentalarm = Intent(applicationContext,AlarmBroadcastReceiver::class.java)
+        val pendingIntent=PendingIntent.getBroadcast(applicationContext,4356,intentalarm,PendingIntent.FLAG_UPDATE_CURRENT
     }
 }
