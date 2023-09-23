@@ -27,6 +27,6 @@ class MainActivity : AppCompatActivity() {
     }
     fun setalarm(millitime:Long,action: String){
         val intentalarm = Intent(applicationContext,AlarmBroadcastReceiver::class.java)
-        val pendingIntent=PendingIntent.getBroadcast(applicationContext,4356,intentalarm,PendingIntent.FLAG_UPDATE_CURRENT
+        val pendingIntent=PendingIntent.getBroadcast(applicationContext,4356,intentalarm,PendingIntent.FLAG_UPDATE_CURRENT)
     }
 }
