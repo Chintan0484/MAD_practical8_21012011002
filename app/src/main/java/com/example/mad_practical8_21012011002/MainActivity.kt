@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val card=findViewById<MaterialCardView>(R.id.card_cancle)
-        card.visibility=View.GONE
+
         val alarmbutton=findViewById<Button>(R.id.clock)
         alarmbutton.setOnClickListener {
             //card.visibility=View.VISIBLE
