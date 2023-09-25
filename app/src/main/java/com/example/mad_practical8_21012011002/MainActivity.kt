@@ -16,15 +16,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val card=findViewById<MaterialCardView>(R.id.card_cancle)
 
+
         val alarmbutton=findViewById<Button>(R.id.clock)
         alarmbutton.setOnClickListener {
             //card.visibility=View.VISIBLE
             TimePickerDialog(this,{tp,hour,minute->setalarmtime(hour,minute)},Calendar.HOUR,Calendar.MINUTE,false).show()
         }
 
-    }
-    fun stop(){
-        setalarm(-1,AlarmBroadcastReceiver.Alarmstop)
     }
     fun setalarmtime(hour: Int, Minute: Int){
         //card.visibility=View.GONE
@@ -35,8 +33,12 @@ class MainActivity : AppCompatActivity() {
         val minute = alarmtime.get(Calendar.MINUTE)
         val hour = alarmtime.get(Calendar.HOUR)
         alarmtime.set(year,month,date,hour,minute)
-        setalarmtime(alarmtime.timeInMillis,AlarmBroadcastReceiver.Alarmstart)
+        setalarm(alarmtime.timeInMillis,AlarmBroadcastReceiver.Alarmstart)
     }
+    fun stop(){
+        setalarm(-1,AlarmBroadcastReceiver.Alarmstop)
+    }
+
     fun setalarm(millitime:Long,action: String){
         val intentalarm = Intent(applicationContext,AlarmBroadcastReceiver::class.java)
         intentalarm.putExtra(AlarmBroadcastReceiver.Alarmkey,action)
