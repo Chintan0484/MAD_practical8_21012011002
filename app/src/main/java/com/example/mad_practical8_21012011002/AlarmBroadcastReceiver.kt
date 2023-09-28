@@ -5,10 +5,7 @@ import android.content.Context
 import android.content.Intent
 
 class AlarmBroadcastReceiver : BroadcastReceiver() {
-
-
     override fun onReceive(context: Context, intent: Intent) {
-        // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
         if(intent != null){
 
             val data = intent.getStringExtra(Alarmkey)
